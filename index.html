@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Hambatan Resistor </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container glass">
+    <h1>Kalkulator Resistor</h1>
+    <p>Pilih warna gelang resistor untuk menghitung nilai resistansi.</p>
+
+    <div class="bands">
+      <select id="band1" onchange="updatePreview()"></select>
+      <select id="band2" onchange="updatePreview()"></select>
+      <select id="multiplier" onchange="updatePreview()"></select>
+      <select id="tolerance" onchange="updatePreview()"></select>
+    </div>
+
+    <button onclick="calculateResistor()">Hitung</button>
+
+    <div class="result">
+      <h2>Hasil:</h2>
+      <p id="resistorValue">0 Ω</p>
+    </div>
+
+    <div class="preview">
+      <h2>Pratinjau Resistor:</h2>
+      <div class="resistor">
+        <div id="band1Color" class="band"></div>
+        <div id="band2Color" class="band"></div>
+        <div id="multiplierColor" class="band"></div>
+        <div id="toleranceColor" class="band"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
